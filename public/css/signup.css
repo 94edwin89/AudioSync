@@ -1,0 +1,55 @@
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+
+.signup-form {
+    margin-top: 2rem;
+    width: 600px;
+    margin-right: 50px;
+    margin-bottom: 2rem;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.signup-form input {
+    
+    width: 100%;
+    
+    
+    
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+   
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pickup-line {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}
+.username{
+    display: flex;
+}
+.userpassword{
+    display: flex;
+}
