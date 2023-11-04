@@ -29,7 +29,7 @@
     position: relative;
     width: 900px;
     height: 450px;
-    background:#83baeb;
+    background:#ffffff;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
       border-radius: 15px;
   }
@@ -144,7 +144,7 @@
     width: 900px;
     height: 100%;
     padding-left: 260px;
-    background: #d5badd;
+    background: #7a78ec;
     -webkit-transition: -webkit-transform 1.2s ease-in-out;
     transition: -webkit-transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out;
