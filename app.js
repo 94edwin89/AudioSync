@@ -36,17 +36,22 @@ app.use(
   }
   
   app.get('/', checkSession, (req, res) => {
-    res.render('pages/login'); 
+    res.render('user/partials/login'); 
   });
   
 
   app.get('/signup',(req,res)=>{
-    res.render('pages/signup')
+    res.render('user/partials/signup')
   })
 
 
+const PORT=process.env.PORT||4000;
 
 
-  app.listen(3000,()=>{
-    console.log('server is running')
+  app.listen(PORT,(err)=>{
+   if (err){
+    console.log('Error starting Eroor'+err)
+   }else{
+    console.log(`Server is running on http://localhost:${PORT}`)
+   }
   })

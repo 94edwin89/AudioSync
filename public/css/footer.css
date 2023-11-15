@@ -16,12 +16,14 @@ footer {
     max-width:200rem; /* Adjust the width of the footer content */
     margin:0 auto;
     display: flex;
-    justify-content: space-between;
+   
     align-items: center;
   }
   
   .footer-sections {
     display: flex;
+    margin-left: 10rem;
+   
   }
   
   /* Additional styling for footer sections */
@@ -29,7 +31,7 @@ footer {
   .contact,
   .newsletter,
   .language {
-    margin-right: 20px;
+    margin-right: 100px;
   }
   
   .products ul,
@@ -52,3 +54,6 @@ footer {
     text-align: center;
   }
   
+  .social-media{
+  margin-right: 1rem;
+  }

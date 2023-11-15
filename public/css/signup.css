@@ -13,7 +13,7 @@
     margin-right: 50px;
     margin-bottom: 2rem;
     padding: 20px;
-    border: 1px solid #ccc;
+    
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
@@ -49,7 +49,14 @@
 }
 .username{
     display: flex;
+    justify-content: space-between;
 }
 .userpassword{
     display: flex;
+    justify-content: space-between;
+}
+
+.otp-submit{
+display: flex;
+justify-content: space-between;
 }
