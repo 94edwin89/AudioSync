@@ -4,8 +4,10 @@ const ejs=require('ejs')
 const nodemailer=require('nodemailer')
 const session=require('express-session')
 const path=require('path')
+const dotenv=require ('dotenv')
 
-
+//configuring .env
+dotenv.config({path:'config.env'});
 
 app.use(express.json())
 app.set('view engine', 'ejs')
@@ -22,7 +24,7 @@ app.use(
       secret: 'your_secret_key',
       resave: false,
       saveUninitialized: true,
-      cookie:{maxAge:18},//30 minutes in milliseconds
+      cookie:{secure:false},
     })
   );
   
@@ -35,14 +37,28 @@ app.use(
     next();
   }
   
+
+  // default route 
+
   app.get('/', checkSession, (req, res) => {
-    res.render('user/partials/login'); 
+    res.render('user/partials/login',
+    {documentTitle:'User Login | AudioSync',
+  session:null
+}); 
+
   });
   
+// signup route
 
   app.get('/signup',(req,res)=>{
-    res.render('user/partials/signup')
+    res.render('user/partials/signup',
+    {documentTitle:'User SignUp | AudioSync',
+  session:null})
   })
+
+  
+
+
 
 
 const PORT=process.env.PORT||4000;
