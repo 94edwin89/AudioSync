@@ -26,7 +26,7 @@
        <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="signup-form">
-                <form action="/signup" method="POST" id="signupForm">
+                <form method="POST" id="signupForm">
                     <div class="username">
                        
                        <div style="width: 48%;">
@@ -57,9 +57,8 @@
     
                     <div class="otp-submit mt-2">
                         <div style="width: 40%;">
-                            <button class="btn btn-outline-primary" name="verifyOTPButton">Verify OTP</button><br>               
+                            <button class="btn btn-outline-primary" name="verifyOTPButton">Verify OTP</button>            
                         </div>
-                        <div style="width: 40%;"> <button class="btn btn-primary" type="submit">Submit</button></div>
                     </div>
                     
                      <button class="btn btn-outline-success mt-2" name="loginButton" onclick="document.location='/'">LogIn</button>
@@ -73,7 +72,62 @@
     </div>
 
 
-   
+
+
+    <script>
+        // Function to validate the email address format
+        function validateEmail() {
+          const emailInput = document.getElementById("email");
+          const emailError = document.getElementById("emailError");
+          const email = emailInput.value;
+          
+          // Define a regular expression pattern for a valid email address
+          const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          
+          if (emailPattern.test(email)) {
+            // Email is valid
+            emailError.textContent = ""; // Clear any previous error message
+            return true;
+          } else {
+            // Email is not valid
+            emailError.textContent = "Please enter a valid email address.";
+            return false;
+          }
+        }
+        
+        // Add an event listener to the email input for validation on input
+        const emailInput = document.getElementById("email");
+        emailInput.addEventListener("input", validateEmail);
+      
+        // for create password and confirm passord validation
+      
+      
+         // Function to validate password and confirm password
+         function validatePassword() {
+          const passwordInput = document.getElementById("password");
+          const confirmPasswordInput = document.getElementById("confirmPassword");
+          const passwordMatchError = document.getElementById("passwordMatchError");
+      
+          const password = passwordInput.value;
+          const confirmPassword = confirmPasswordInput.value;
+      
+          if (password === confirmPassword) {
+            // Passwords match, clear error message
+            passwordMatchError.textContent = "";
+            return true;
+          } else {
+            // Passwords do not match, display an error message
+            passwordMatchError.textContent = "Passwords do not match.";
+            return false;
+          }
+        }
+      
+        // Add event listeners to the password and confirm password fields
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirmPassword");
+        passwordInput.addEventListener("input", validatePassword);
+        confirmPasswordInput.addEventListener("input", validatePassword);
+      </script>
 
      
     
