@@ -12,50 +12,6 @@ const mongoose = require('mongoose');
 // Configuring .env
 dotenv.config({ path: 'config.env' });
 
-// MongoDB Connection using Mongoose
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log('MongoDB connected');
-  })
-  .catch((error) => {
-    console.log('Failed to connect to MongoDB');
-    console.error(error);
-  });
-
-// Mongoose schema and model
-const userSchema = new mongoose.Schema({
-  firstName: {
-    type: String,
-    required: true,
-  },
-  lastName: {
-    type: String,
-    required: true,
-  },
-  userName: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  enteredOTP: {
-    type: String,
-    required: true,
-  },
-  hashedPassword: {
-    type: String,
-    required: true,
-  },
-});
-
-const UserModel = mongoose.model('User', userSchema);
-
 app.use(express.json());
 app.set('view engine', 'ejs');
 
