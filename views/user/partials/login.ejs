@@ -11,42 +11,31 @@
 </head>
 <body>
     
-    <div class="container">
+     <div class="container">
 
         <div class="col-md-6">
             <div class="image-container">
                 <img style="width: 400px;" src="/images/logo-golden.png" alt="Image">
-               
             </div>
         </div>
-
 
         <div class="row">
             <div class="col-md-6">
                 <div class="signup-form">
                     <form action="/" method="POST">
                         <div class="username">
-                           
-                           
+                            <input class="form-control" type="text" placeholder="User Name" required>
                         </div>
-                        <input class="form-control" type="text" placeholder="User Name" required>
-                          <div  class="userpassword">
-                            <div  class="input-group mb-3"><input class="form-control" style="width:27.2rem;" type="password" placeholder="Password" required>
-                                 </div>
-                            <div></div>
+                        <div class="userpassword">
+                            <div class="input-group mb-3"><input class="form-control" style="width:27.2rem;" type="password" placeholder="Password" required></div>
                         </div>
-                          
                         <button class="btn btn-primary" type="submit">LogIn</button>
-                        
-                        <p>Don't have a Account?</p>
-                         <button class="btn btn-outline-success" name="loginButton" onclick="document.location='/signup'">Signup</button>
-          
+                        <p>Don't have an Account?</p>
+                        <button class="btn btn-outline-success" name="loginButton" onclick="document.location='/signup'">Signup</button>
                     </form>
                 </div>
             </div>
         </div>
-
-       
     </div>
 
     <%- include('../layouts/footer.ejs') %>
